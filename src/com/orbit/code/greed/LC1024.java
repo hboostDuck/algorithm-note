@@ -1,5 +1,7 @@
 package com.orbit.code.greed;
 
+import jdk.nashorn.internal.ir.IfNode;
+
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -8,22 +10,29 @@ import java.util.Comparator;
  * @Date: 2022/08/20/21:50
  * @Description:
  */
-//public class LC1024 {
-//    public int videoStitching(int[][] clips, int time) {
-//        Arrays.sort(clips, (o1, o2) -> {
-//            if (o1[0] != o2[0]){
-//                return o1[0] - o2[0];
-//            }
-//            return o2[1] -o1[0];
-//        });
-//
-//        int res = 1;
-//        int curStart = clips[0][0],curEnd = clips[0][1];
-//        if (curStart != 0) return -1;
-//        for (int i = 1; i < clips.length; i++) {
-//            if (clips[i][0] >curStart ){
-//
-//            }
-//        }
-//    }
-//}
+public class LC1024 {
+    public int videoStitching(int[][] clips, int time) {
+        Arrays.sort(clips, (a, b) -> {
+            if (a[0] != b[0]){
+                return a[0] - b[0];
+            }
+            return b[1] -a[1];
+        });
+        int res =0;
+
+        int curEnd = 0,nextEnd = 0;
+        int i = 0, n = clips.length;
+        while (i<n && clips[i][0] <=curEnd){
+            while (i< n && clips[i][0] <= curEnd){
+                nextEnd = Math.max(nextEnd,clips[i][1]);
+                i++;
+            }
+            res++;
+            curEnd = nextEnd;
+            if (curEnd >= time){
+                return res;
+            }
+        }
+        return -1;
+    }
+}

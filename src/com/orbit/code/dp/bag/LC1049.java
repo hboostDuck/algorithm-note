@@ -13,11 +13,13 @@ public class LC1049 {
         }
         int target = sum/2;
         int dp[] =  new int[target+1];
-        for (int stone : stones) {
-            for (int i = target; i >= stone; i--) {
-                dp[i] = Math.max(dp[i],dp[i-stone]+stone);
+        for (int i = 1; i <= stones.length; i++) {
+            for (int j = target; j >0; j--) {
+                if (j >= stones[i-1]){
+                    dp[j] = Math.max(dp[j],dp[j-stones[i-1]]+stones[i-1]);
+                }
             }
         }
-        return sum-2*dp[target];
+        return sum- 2*dp[target];
     }
 }

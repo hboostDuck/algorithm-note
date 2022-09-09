@@ -29,4 +29,21 @@ public class LC416 {
         }
         return dp[n][sum];
     }
+    public boolean canPartition1(int[] nums) {
+        int n = nums.length;
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            sum+= nums[i];
+        }
+        if (sum %2 != 0) return false;
+        sum/=2;
+        Boolean[] dp = new Boolean[sum + 1];
+        dp[0] = true;
+        for (int i = 1; i <= n; i++) {
+            for (int j = sum; j >= nums[i-1]; j--) {
+                dp[j] = dp[j] || dp[j-nums[i-1]];
+            }
+        }
+        return dp[sum];
+    }
 }
