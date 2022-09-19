@@ -8,8 +8,7 @@ public class QuickSort {
     public static void main(String[] args) {
         int[] ints = new int[]{8,5,6,5,4,3,4,1,9};
         QuickSort quickSort = new QuickSort();
-//        quickSort.quickSort(ints,0,ints.length-1);
-        quickSort.qSort(ints,0,ints.length-1);
+        quickSort.quickSort(ints,0,ints.length-1);
         System.out.println(Arrays.toString(ints));
     }
     public int[] sortArray(int[] nums) {
@@ -31,10 +30,6 @@ public class QuickSort {
             int temp = nums[left];
             nums[left] = nums[right];
             nums[right] = temp;
-//            if (nums[left] == mid &&nums[right] == mid){
-//                right--;
-//                left++;
-//            }
             if (nums[left] == mid) right--;
             if (nums[right] == mid) left++;
         }
@@ -51,26 +46,26 @@ public class QuickSort {
     }
 
 
-    void qSort(int[] nums,int start,int end){
-        if (end <= start){
-            return;
-        }
-        int index = partition(nums,start,end);
-
-        qSort(nums,index+1,end);
-        qSort(nums,start,index-1);
-    }
-
-    private int partition(int[] nums, int start, int end) {
-        int pivot = nums[start];
-        int left = start,right = end;
-        while (left < right){
-            while (left < right && nums[right] >= pivot) right--;
-            nums[left] = nums[right];
-            while (left < right && nums[left] <= pivot) left++;
-            nums[right] = nums[left];
-        }
-        nums[left] = pivot;
-        return left;
-    }
+//    void qSort(int[] nums,int start,int end){
+//        if (end <= start){
+//            return;
+//        }
+//        int index = partition(nums,start,end);
+//
+//        qSort(nums,start,index-1);
+//        qSort(nums,index+1,end);
+//    }
+//
+//    private int partition(int[] nums, int start, int end) {
+//        int pivot = nums[start];
+//        int left = start,right = end;
+//        while (left < right){
+//            while (left < right && nums[right] >= pivot) right--;
+//            nums[left] = nums[right];
+//            while (left < right && nums[left] <= pivot) left++;
+//            nums[right] = nums[left];
+//        }
+//        nums[left] = pivot;
+//        return left;
+//    }
 }
