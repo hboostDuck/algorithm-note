@@ -1,9 +1,7 @@
 package com.orbit.code.greed;
 
-import jdk.nashorn.internal.ir.IfNode;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 /**
  * @Author: orbit

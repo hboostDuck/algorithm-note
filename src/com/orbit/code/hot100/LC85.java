@@ -1,10 +1,5 @@
 package com.orbit.code.hot100;
 
-import jdk.nashorn.internal.ir.WhileNode;
-
-import java.util.Arrays;
-import java.util.Stack;
-
 /**
  * @Author: orbit
  * @Date: 2022/09/12/16:55

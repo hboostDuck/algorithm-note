@@ -1,10 +1,7 @@
 package com.orbit.code.hot100;
 
-import com.sun.media.sound.RIFFInvalidDataException;
-import com.sun.org.apache.xpath.internal.WhitespaceStrippingElementMatcher;
-
-import javax.swing.text.AbstractDocument;
-import java.util.*;
+import java.util.Arrays;
+import java.util.Stack;
 
 /**
  * @Author: orbit

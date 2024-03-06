@@ -1,4 +1,4 @@
-package com.orbit.code.offer1;
+package com.orbit.code.offer2;
 
 /**
  * @Author: orbit

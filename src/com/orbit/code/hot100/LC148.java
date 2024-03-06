@@ -1,9 +1,7 @@
 package com.orbit.code.hot100;
 
 import com.orbit.code.list.ListNode;
-import com.sun.org.apache.xpath.internal.WhitespaceStrippingElementMatcher;
 
-import java.util.LinkedList;
 import java.util.PriorityQueue;
 
 /**

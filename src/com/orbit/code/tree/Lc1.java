@@ -1,6 +1,5 @@
 package com.orbit.code.tree;
 
-import jdk.nashorn.internal.runtime.regexp.joni.constants.Traverse;
 
 public class Lc1 {
     // 记录最大深度

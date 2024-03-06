@@ -1,13 +1,7 @@
 package com.orbit.code.hot100;
 
-import com.orbit.code.test.TEST;
-import jdk.nashorn.internal.runtime.regexp.joni.constants.Traverse;
-import sun.net.www.protocol.http.HttpURLConnection;
-
-import javax.lang.model.element.VariableElement;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Random;
 
 /**
  * @Author: orbit

@@ -1,6 +1,7 @@
 package com.orbit.code.water;
 
 import javax.lang.model.util.ElementScanner6;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * @Author: orbit
@@ -23,4 +24,9 @@ public class LC11 {
         }
         return res;
     }
+
+//    public static void main(String[] args) {
+//        CompletableFuture<Object> future = CompletableFuture.completedFuture(Integer);
+//        future.
+//    }
 }
