@@ -37,18 +37,18 @@ public class LC12 {
         return false;
     }
 
-    public static void main(String[] args) throws InterruptedException {
-//        ThreadFactory vtf = Thread.ofVirtual().factory();
-//        Thread thread = vtf.newThread(() -> {
+//    public static void main(String[] args) throws InterruptedException {
+////        ThreadFactory vtf = Thread.ofVirtual().factory();
+////        Thread thread = vtf.newThread(() -> {
+////            System.out.println(Thread.currentThread().getName());
+////        });
+////        thread.start();
+//        Thread.startVirtualThread(()-> {
 //            System.out.println(Thread.currentThread().getName());
+//            System.out.println("1111");
 //        });
-//        thread.start();
-        Thread.startVirtualThread(()-> {
-            System.out.println(Thread.currentThread().getName());
-            System.out.println("1111");
-        });
-
-        Thread.sleep(Duration.ofSeconds(1));
-
-    }
+//
+//        Thread.sleep(Duration.ofSeconds(1));
+//
+//    }
 }
